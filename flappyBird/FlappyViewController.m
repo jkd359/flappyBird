@@ -23,6 +23,7 @@
     // Create and configure the scene.
     SKScene * scene = [FlappyMyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.physicsWorld.gravity = CGVectorMake(0.0, -6.0);
     
     // Present the scene.
     [skView presentScene:scene];

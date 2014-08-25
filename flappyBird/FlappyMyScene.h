@@ -8,6 +8,26 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface FlappyMyScene : SKScene
+@interface FlappyMyScene : SKScene <SKPhysicsContactDelegate> {
+    
+    SKSpriteNode *bird;
+    SKSpriteNode *bg;
+    
+    NSMutableArray *pipeArray;
+    
+    int score;
+    
+    SKLabelNode *scoreLabel;
+    
+    NSTimer *timer;
+    
+    BOOL firstTouch;
+    
+    
+    
+    
+}
+
+-(void)spawnPipes;
 
 @end
